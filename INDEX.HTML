@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Windows ISO Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://img.icons8.com/color/48/windows-10.png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a2e);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glow-ring {
+      box-shadow: 0 0 15px #00c3ff, 0 0 25px #0077ff;
+    }
+    .neon {
+      text-shadow: 0 0 10px #00e0ff, 0 0 20px #00b3ff;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="text-white min-h-screen flex flex-col relative">
+
+  <!-- Toggle -->
+  <div class="absolute top-4 right-6 z-50">
+    <button onclick="document.body.classList.toggle('invert')"
+      class="bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded-lg text-sm">
+      🌓 Toggle Mode
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="text-center p-6 text-5xl font-extrabold neon tracking-wide">
+    🪟 Windows ISO Hub
+  </header>
+
+  <!-- Main Grid -->
+  <main class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto w-full">
+
+    <!-- Card -->
+    <div class="glass glow-ring card p-6 rounded-3xl shadow-lg text-center">
+      <img src="https://img.icons8.com/color/96/windows-11.png" class="w-16 mx-auto mb-4" />
+      <h2 class="text-2xl font-bold mb-2">Windows 11 Pro</h2>
+      <p class="text-gray-300 mb-4">Latest 64-bit ISO</p>
+      <a title="Go to Microsoft Download Page" href="https://www.microsoft.com/software-download/windows11"
+         target="_blank"
+         class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full font-semibold transition-all">
+        Download
+      </a>
+    </div>
+
+    <div class="glass glow-ring card p-6 rounded-3xl shadow-lg text-center">
+      <img src="https://img.icons8.com/color/96/windows-10.png" class="w-16 mx-auto mb-4" />
+      <h2 class="text-2xl font-bold mb-2">Windows 10 Pro</h2>
+      <p class="text-gray-300 mb-4">x64 & x86 All Editions</p>
+      <a href="https://www.microsoft.com/software-download/windows10" target="_blank"
+         class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full font-semibold transition-all">
+        Download
+      </a>
+    </div>
+
+    <div class="glass glow-ring card p-6 rounded-3xl shadow-lg text-center">
+      <img src="https://img.icons8.com/color/96/windows8.png" class="w-16 mx-auto mb-4" />
+      <h2 class="text-2xl font-bold mb-2">Windows 8.1 Pro</h2>
+      <p class="text-gray-300 mb-4">Official Microsoft ISO</p>
+      <a href="https://www.microsoft.com/software-download/windows8ISO" target="_blank"
+         class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full font-semibold transition-all">
+        Download
+      </a>
+    </div>
+
+    <div class="glass card p-6 rounded-3xl shadow-lg text-center opacity-40 cursor-not-allowed">
+      <img src="https://img.icons8.com/color/96/windows8.png" class="w-16 mx-auto mb-4" />
+      <h2 class="text-2xl font-bold mb-2">Windows 8 Pro</h2>
+      <p class="text-gray-400 mb-4">Archived | Unavailable</p>
+      <span class="bg-gray-600 px-4 py-2 rounded-full font-semibold inline-block">Not Available</span>
+    </div>
+
+    <div class="glass glow-ring card p-6 rounded-3xl shadow-lg text-center">
+      <img src="https://img.icons8.com/color/96/windows-logo.png" class="w-16 mx-auto mb-4" />
+      <h2 class="text-2xl font-bold mb-2">Windows 7 Pro</h2>
+      <p class="text-gray-300 mb-4">ISO from Archive.org</p>
+      <a href="https://archive.org/details/windows-7-professional-iso" target="_blank"
+         class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-full font-semibold transition-all">
+        Download
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Bottom Floating Bar -->
+  <div class="fixed bottom-4 left-0 right-0 mx-auto text-center">
+    <div class="inline-flex bg-gray-900/70 backdrop-blur-lg border border-gray-700 px-4 py-2 rounded-xl gap-4 text-sm shadow-md">
+      <a href="mailto:you@example.com" class="hover:text-blue-400">📧 Contact</a>
+      <a href="#" onclick="navigator.clipboard.writeText(window.location.href); alert('Link Copied!')" class="hover:text-green-400">🔗 Share</a>
+      <a href="#top" class="hover:text-pink-400">⬆️ Top</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-400 p-6 mt-16 text-xs">
+    © 2025 Windows ISO Hub | Designed by <span class="text-blue-300">You 💙</span>
+  </footer>
+
+</body>
+</html>
